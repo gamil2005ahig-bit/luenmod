@@ -1,0 +1,115 @@
+using System.Collections.Generic;
+
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.ValueProps;
+
+namespace Luen.LuenCode.Cards;
+
+public class CaduceusOpening()
+    : LuenCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+{
+    private const string EffectVarName = "CaduceusEffect";
+
+    // 카드 설명에 현재 효과 번호를 표시한다.
+    // 1: 피해 5 + 가시 5
+    // 2: 피해 5 + 피해 2를 2번
+    // 3: 모든 적에게 피해 4를 2번
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    [
+        new DynamicVar(EffectVarName, 1m)
+    ];
+
+    // 카드가 생성된 뒤 Drawn 이벤트를 연결한다.
+    public override void AfterCreated()
+    {
+        base.AfterCreated();
+
+        Drawn += SelectEffect;
+    }
+
+    // 카드 복제 과정에서 Drawn 이벤트가 초기화되므로 다시 연결한다.
+    protected override void AfterCloned()
+    {
+        base.AfterCloned();
+
+        Drawn += SelectEffect;
+    }
+
+    // 카드를 뽑을 때마다 효과를 무작위로 결정한다.
+    private void SelectEffect()
+    {
+        if (RunState == null)
+        {
+            return;
+        }
+
+        int effect =
+            RunState.Rng.CombatCardSelection.NextInt(3) + 1;
+
+        DynamicVars[EffectVarName].BaseValue = effect;
+
+        MainFile.Logger.Info(
+            $"CaduceusOpening 효과 변경: {effect}"
+        );
+    }
+
+    protected override async Task OnPlay(
+        PlayerChoiceContext context,
+        CardPlay cardPlay)
+    {
+        int effect =
+            (int)DynamicVars[EffectVarName].BaseValue;
+
+        switch (effect)
+        {
+            case 1:
+                // 대상에게 피해 5를 준다.
+                await DamageCmd.Attack(5m)
+                    .FromCard(this, cardPlay)
+                    .Targeting(cardPlay.Target!)
+                    .Execute(context);
+
+                // 자신에게 가시 5를 부여한다.
+                await PowerCmd.Apply<ThornsPower>(
+                    context,
+                    Owner.Creature,
+                    5m,
+                    Owner.Creature,
+                    this
+                );
+                break;
+
+            case 2:
+                // 대상에게 피해 5를 준다.
+                await DamageCmd.Attack(5m)
+                    .FromCard(this, cardPlay)
+                    .Targeting(cardPlay.Target!)
+                    .Execute(context);
+
+                // 대상에게 피해 2를 두 번 준다.
+                for (int i = 0; i < 2; i++)
+                {
+                    await DamageCmd.Attack(2m)
+                        .FromCard(this, cardPlay)
+                        .Targeting(cardPlay.Target!)
+                        .Execute(context);
+                }
+                break;
+
+            case 3:
+                // 모든 적에게 피해 4를 두 번 준다.
+                for (int i = 0; i < 2; i++)
+                {
+                    await DamageCmd.Attack(4m)
+                        .FromCard(this, cardPlay)
+                        .TargetingAllOpponents(CombatState!)
+                        .Execute(context);
+                }
+                break;
+        }
+    }
+}
