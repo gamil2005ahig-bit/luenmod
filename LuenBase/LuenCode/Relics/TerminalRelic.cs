@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using BaseLib.Cards.Variables;
+using Luen.LuenCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -11,7 +12,6 @@ using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -197,7 +197,7 @@ public class TerminalRelic : LuenRelic
         _questCompletedThisTurn = true;
         Flash();
 
-        await PowerCmd.Apply<StrengthPower>(
+        await PowerCmd.Apply<CommandProtectionPower>(
             choiceContext,
             Owner.Creature,
             1m,
@@ -205,14 +205,6 @@ public class TerminalRelic : LuenRelic
             null
         );
 
-        await PowerCmd.Apply<DexterityPower>(
-            choiceContext,
-            Owner.Creature,
-            1m,
-            Owner.Creature,
-            null
-        );
-
-        MainFile.Logger.Info("Terminal command completed: gained 1 Strength and 1 Dexterity.");
+        MainFile.Logger.Info("Terminal command completed: gained 1 stack of Command's Protection.");
     }
 }
