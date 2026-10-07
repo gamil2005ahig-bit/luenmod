@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Luen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d2baca85fbddb871c56d024688ec523c9280686")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9240cf2371f418a4b5812c910de39729fea34fd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Luen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Luen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
