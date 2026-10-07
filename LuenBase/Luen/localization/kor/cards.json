@@ -1,4 +1,6 @@
 {
   "LUEN-CADUCEUS_START.title": "카두세우스 - 시작",
-  "LUEN-CADUCEUS_START.description": "현재 효과: {CaduceusEffect}.\n1: 피해 6 및 방어도 6.\n2: 피해 6 및 취약 1.\n3: 피해 6 및 모든 적에게 피해 4."
+  "LUEN-CADUCEUS_START.description": "현재 효과: {CaduceusEffect}.\n1: 피해 6 및 방어도 6.\n2: 피해 6 및 취약 1.\n3: 피해 6 및 모든 적에게 피해 4.",
+  "LUEN-MULTI_SLASH.title": "다중 베기",
+  "LUEN-MULTI_SLASH.description": "피해 7을 줍니다. 카드를 1장 뽑습니다. 뽑을 카드 더미가 유일하면 에너지를 1 얻습니다."
 }
