@@ -1,3 +1,4 @@
 {
-  
+  "LUEN-TERMINAL_RELIC.title": "Terminal",
+  "LUEN-TERMINAL_RELIC.description": "At the start of each turn, receive a random command.\nCurrent command: {TerminalCommand}\nComplete it to gain 1 Strength and 1 Dexterity for the rest of combat."
 }
