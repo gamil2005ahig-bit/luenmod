@@ -12,5 +12,7 @@
   "LUEN-MULTI_SLASH.title": "Multi Slash",
   "LUEN-MULTI_SLASH.description": "Deal 7 damage. Draw 1 card. If your draw pile is Unique, gain 1 Energy.",
   "LUEN-CADUCEUS_OPENING.title": "Caduceus - Opening",
-  "LUEN-CADUCEUS_OPENING.description": "Activate one of the following effects. The effect is determined when drawn.\n1: Deal 5 damage and gain 5 Thorns.\n2: Deal 5 damage, then deal 2 damage twice.\n3: Deal 4 damage to ALL enemies twice."
+  "LUEN-CADUCEUS_OPENING.description": "Current effect: {CaduceusEffect}.\n1: Deal 5 damage and gain 5 Thorns.\n2: Deal 5 damage, then deal 2 damage twice.\n3: Deal 4 damage to ALL enemies twice.",
+  "LUEN-CADUCEUS_VERSATILE.title": "Caduceus - Versatile",
+  "LUEN-CADUCEUS_VERSATILE.description": "Current effect: {CaduceusEffect}. Repeat the selected effect X times.\n1: Deal 1 damage and gain 9 Block.\n2: Deal 5 damage and gain 5 Block.\n3: Deal 9 damage and gain 1 Block."
 }
