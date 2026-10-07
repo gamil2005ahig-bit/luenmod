@@ -1,0 +1,5 @@
+C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\bin\Debug\publish\Luen.dll
+C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\bin\Debug\publish\Luen.pdb
+C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\bin\Debug\publish\GodotSharp.dll
+C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\bin\Debug\publish\GodotSharpEditor.dll
+C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\bin\Debug\publish\Luen.deps.json
