@@ -1,6 +1,18 @@
 {
   "LUEN-CADUCEUS_START.title": "카두세우스 - 시작",
   "LUEN-CADUCEUS_START.description": "현재 효과: {CaduceusEffect}.\n1: 피해 6 및 방어도 6.\n2: 피해 6 및 취약 1.\n3: 피해 6 및 모든 적에게 피해 4.",
+  "LUEN-AS_ORDERED.title": "지령대로",
+  "LUEN-AS_ORDERED.description": "피해 2를 3번 줍니다. 방어도를 1씩 3번 얻습니다.",
+  "LUEN-SLASH.title": "베기",
+  "LUEN-SLASH.description": "피해 12를 줍니다.",
+  "LUEN-DOUBLE_SLASH.title": "두번 베기",
+  "LUEN-DOUBLE_SLASH.description": "피해 4를 2번 줍니다.",
+  "LUEN-COMMAND_TRAJECTORY.title": "지령의 궤적",
+  "LUEN-COMMAND_TRAJECTORY.description": "피해 10을 줍니다. 대상의 힘을 제거합니다.",
   "LUEN-MULTI_SLASH.title": "다중 베기",
-  "LUEN-MULTI_SLASH.description": "피해 7을 줍니다. 카드를 1장 뽑습니다. 뽑을 카드 더미가 유일하면 에너지를 1 얻습니다."
+  "LUEN-MULTI_SLASH.description": "피해 7을 줍니다. 카드를 1장 뽑습니다. 뽑을 카드 더미가 유일하면 에너지를 1 얻습니다.",
+  "LUEN-CADUCEUS_OPENING.title": "카두세우스 - 개전",
+  "LUEN-CADUCEUS_OPENING.description": "현재 효과: {CaduceusEffect}.\n1: 피해 5를 주고 가시 5를 얻습니다.\n2: 피해 5를 준 뒤 피해 2를 2번 줍니다.\n3: 모든 적에게 피해 4를 2번 줍니다.",
+  "LUEN-CADUCEUS_VERSATILE.title": "카두세우스 - 다용도",
+  "LUEN-CADUCEUS_VERSATILE.description": "현재 효과: {CaduceusEffect}. 선택한 효과를 X번 반복합니다.\n1: 피해 1을 주고 방어도 9를 얻습니다.\n2: 피해 5를 주고 방어도 5를 얻습니다.\n3: 피해 9를 주고 방어도 1을 얻습니다."
 }

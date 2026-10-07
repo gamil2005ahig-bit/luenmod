@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using BaseLib.Cards.Variables;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -8,6 +9,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Rooms;
@@ -36,7 +38,25 @@ public class TerminalRelic : LuenRelic
     private bool _powerCardPlayedThisTurn;
     private bool _questCompletedThisTurn;
 
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    [
+        new DisplayVar<TerminalRelic>("TerminalCommand", relic => relic.CommandDisplay)
+    ];
+
     public override RelicRarity Rarity => RelicRarity.Starter;
+
+    private string CommandDisplay => _currentQuest switch
+    {
+        null => "No active command.",
+        _ when _questCompletedThisTurn => "Completed.",
+        Quest.DealFifteenDamage => $"Deal 15 damage — {_damageGivenThisTurn:0}/15",
+        Quest.TakeNoDamage => $"Take no damage — {_damageReceivedThisTurn:0} taken",
+        Quest.TakeFiveDamage => $"Take 5 damage — {_damageReceivedThisTurn:0}/5",
+        Quest.DrawTwoCards => $"Draw 2 cards — {_extraCardsDrawnThisTurn}/2",
+        Quest.EndWithOneEnergy => $"End with 1 Energy — current: {Owner.PlayerCombatState.Energy:0}",
+        Quest.PlayPowerCard => "Play a Power card — incomplete",
+        _ => "Unknown command."
+    };
 
     public override Task AfterPlayerTurnStart(
         PlayerChoiceContext choiceContext,
