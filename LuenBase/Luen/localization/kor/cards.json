@@ -56,7 +56,7 @@
   "LUEN-REPEATING_COMMAND.title": "반복되는 지령",
   "LUEN-REPEATING_COMMAND.description": "지령의 가호를 X 얻습니다. 소멸합니다.",
   "LUEN-PANIC_RECOVERY.title": "패닉 회복",
-  "LUEN-PANIC_RECOVERY.description": "자신의 취약, 약화, 손상을 각각 4씩 줄입니다. 소멸합니다.",
+  "LUEN-PANIC_RECOVERY.description": "자신의 취약과 약화를 각각 4씩 줄입니다. 손에 있는 손상 카드를 최대 4장 소멸시킵니다. 소멸합니다.",
   "LUEN-READY_STANCE.title": "준비자세",
   "LUEN-READY_STANCE.description": "뽑을 카드 더미에서 최대 3장까지 선택해 소멸시킵니다. 카드를 1장 뽑습니다."
 }
