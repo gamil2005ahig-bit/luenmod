@@ -1,3 +1,20 @@
 {
-  
+  "LUEN-COMMAND_PROTECTION_POWER.title": "지령의 가호",
+  "LUEN-COMMAND_PROTECTION_POWER.description": "지령의 가호 1스택마다 힘 1과 민첩 1을 얻습니다.",
+  "LUEN-COMMAND_PROTECTION_POWER.smartDescription": "지령의 가호 1스택마다 힘 1과 민첩 1을 얻습니다.",
+  "LUEN-NEXT_TURN_ENERGY_POWER.title": "준비된 에너지",
+  "LUEN-NEXT_TURN_ENERGY_POWER.description": "다음 턴 시작 시 에너지를 X 얻습니다.",
+  "LUEN-NEXT_TURN_ENERGY_POWER.smartDescription": "다음 턴 시작 시 에너지를 X 얻습니다.",
+  "LUEN-NEXT_TURN_DRAW_POWER.title": "준비된 드로우",
+  "LUEN-NEXT_TURN_DRAW_POWER.description": "다음 턴 시작 시 카드를 X장 뽑습니다.",
+  "LUEN-NEXT_TURN_DRAW_POWER.smartDescription": "다음 턴 시작 시 카드를 X장 뽑습니다.",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.title": "임시지령",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.description": "이번 턴 종료까지 지령의 가호를 X 얻습니다.",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.smartDescription": "이번 턴 종료까지 지령의 가호를 X 얻습니다.",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.title": "억눌린 힘",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.description": "이번 턴 종료까지 힘을 X 잃습니다.",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.smartDescription": "이번 턴 종료까지 힘을 X 잃습니다.",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.title": "카두세우스 계획",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.description": "다음에 사용하는 카두세우스 카드의 비용이 0이 됩니다.",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.smartDescription": "다음에 사용하는 카두세우스 카드의 비용이 0이 됩니다."
 }

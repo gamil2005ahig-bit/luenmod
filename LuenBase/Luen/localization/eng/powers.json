@@ -1,3 +1,20 @@
 {
-  
+  "LUEN-COMMAND_PROTECTION_POWER.title": "Command's Protection",
+  "LUEN-COMMAND_PROTECTION_POWER.description": "Gain 1 Strength and 1 Dexterity for each stack of Command's Protection.",
+  "LUEN-COMMAND_PROTECTION_POWER.smartDescription": "Gain 1 Strength and 1 Dexterity for each stack of Command's Protection.",
+  "LUEN-NEXT_TURN_ENERGY_POWER.title": "Prepared Energy",
+  "LUEN-NEXT_TURN_ENERGY_POWER.description": "At the start of your next turn, gain X Energy.",
+  "LUEN-NEXT_TURN_ENERGY_POWER.smartDescription": "At the start of your next turn, gain X Energy.",
+  "LUEN-NEXT_TURN_DRAW_POWER.title": "Prepared Draw",
+  "LUEN-NEXT_TURN_DRAW_POWER.description": "At the start of your next turn, draw X cards.",
+  "LUEN-NEXT_TURN_DRAW_POWER.smartDescription": "At the start of your next turn, draw X cards.",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.title": "Temporary Command",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.description": "Gain X Command's Protection until the end of this turn.",
+  "LUEN-TEMPORARY_COMMAND_PROTECTION_POWER.smartDescription": "Gain X Command's Protection until the end of this turn.",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.title": "Suppressed Strength",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.description": "Lose X Strength until the end of this turn.",
+  "LUEN-TEMPORARY_STRENGTH_REDUCTION_POWER.smartDescription": "Lose X Strength until the end of this turn.",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.title": "Caduceus Plan",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.description": "The next Caduceus card you play costs 0.",
+  "LUEN-NEXT_CADUCEUS_FREE_POWER.smartDescription": "The next Caduceus card you play costs 0."
 }

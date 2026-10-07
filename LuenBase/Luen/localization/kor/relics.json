@@ -1,4 +1,4 @@
 {
   "LUEN-TERMINAL_RELIC.title": "단말기",
-  "LUEN-TERMINAL_RELIC.description": "매 턴 시작 시 무작위 지령을 받습니다.\n현재 지령: {TerminalCommand}\n지령을 수행하면 전투 종료까지 힘 1과 민첩 1을 얻습니다."
+  "LUEN-TERMINAL_RELIC.description": "매 턴 시작 시 무작위 지령을 받습니다.\n현재 지령: {TerminalCommand}\n지령을 수행하면 지령의 가호를 1 얻습니다."
 }

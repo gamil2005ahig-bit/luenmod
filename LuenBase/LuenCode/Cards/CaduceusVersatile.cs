@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Luen.LuenCode.Cards;
 
 public class CaduceusVersatile()
-    : LuenCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    : LuenCard(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     private const string EffectVarName = "CaduceusEffect";
 
