@@ -17,14 +17,19 @@ namespace Luen.LuenCode.Relics;
 
 public class TerminalRelic : LuenRelic
 {
-    // 0: 피해 15 주기
-    // 1: 피해 받지 않기
-    // 2: 피해 5 이상 받기
-    // 3: 카드 2장 이상 뽑기
-    // 4: 턴 종료 시 에너지 1
-    // 5: 파워 카드 사용
-    private int _currentQuest = -1;
+    private enum Quest
+    {
+        DealFifteenDamage,
+        TakeNoDamage,
+        TakeFiveDamage,
+        DrawTwoCards,
+        EndWithOneEnergy,
+        PlayPowerCard
+    }
 
+    private const int QuestCount = 6;
+
+    private Quest? _currentQuest;
     private decimal _damageGivenThisTurn;
     private decimal _damageReceivedThisTurn;
     private int _extraCardsDrawnThisTurn;
@@ -33,28 +38,23 @@ public class TerminalRelic : LuenRelic
 
     public override RelicRarity Rarity => RelicRarity.Starter;
 
-    public override async Task AfterPlayerTurnStart(
+    public override Task AfterPlayerTurnStart(
         PlayerChoiceContext choiceContext,
         Player player)
     {
         if (player != Owner)
         {
-            return;
+            return Task.CompletedTask;
         }
 
         ResetTurnProgress();
+        _currentQuest = (Quest)Owner.RunState!.Rng.CombatCardSelection.NextInt(QuestCount);
 
-        // 매 턴 시작 시 새로운 지령을 무작위로 정한다.
-        _currentQuest = Owner.RunState!.Rng.CombatCardSelection.NextInt(6);
-
-        MainFile.Logger.Info(
-            $"단말기 새 지령: {_currentQuest}"
-        );
-
-        await Task.CompletedTask;
+        MainFile.Logger.Info($"Terminal new command: {_currentQuest}");
+        return Task.CompletedTask;
     }
 
-    public override Task AfterDamageGiven(
+    public override async Task AfterDamageGiven(
         PlayerChoiceContext choiceContext,
         Creature? dealer,
         DamageResult result,
@@ -67,13 +67,11 @@ public class TerminalRelic : LuenRelic
             result.TotalDamage > 0)
         {
             _damageGivenThisTurn += result.TotalDamage;
-            CheckQuest();
+            await CheckQuest(choiceContext);
         }
-
-        return Task.CompletedTask;
     }
 
-    public override Task AfterDamageReceived(
+    public override async Task AfterDamageReceived(
         PlayerChoiceContext choiceContext,
         Creature target,
         DamageResult result,
@@ -81,64 +79,51 @@ public class TerminalRelic : LuenRelic
         Creature? dealer,
         CardModel? cardSource)
     {
-        if (target == Owner.Creature &&
-            result.TotalDamage > 0)
+        if (target == Owner.Creature && result.TotalDamage > 0)
         {
             _damageReceivedThisTurn += result.TotalDamage;
-            CheckQuest();
+            await CheckQuest(choiceContext);
         }
-
-        return Task.CompletedTask;
     }
 
-    public override Task AfterCardDrawn(
+    public override async Task AfterCardDrawn(
         PlayerChoiceContext choiceContext,
         CardModel card,
         bool fromHandDraw)
     {
-        if (card.Owner == Owner &&
-            !fromHandDraw)
+        if (card.Owner == Owner && !fromHandDraw)
         {
             _extraCardsDrawnThisTurn++;
-            CheckQuest();
+            await CheckQuest(choiceContext);
         }
-
-        return Task.CompletedTask;
     }
 
-    public override Task AfterCardPlayed(
+    public override async Task AfterCardPlayed(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        if (cardPlay.Card.Owner == Owner &&
-            cardPlay.Card.Type == CardType.Power)
+        if (cardPlay.Card.Owner == Owner && cardPlay.Card.Type == CardType.Power)
         {
             _powerCardPlayedThisTurn = true;
-            CheckQuest();
+            await CheckQuest(choiceContext);
         }
-
-        return Task.CompletedTask;
     }
 
     public override async Task BeforeSideTurnEnd(
-    PlayerChoiceContext choiceContext,
-    CombatSide side,
-    IEnumerable<Creature> participants)
+        PlayerChoiceContext choiceContext,
+        CombatSide side,
+        IEnumerable<Creature> participants)
     {
-        if (!participants.Contains(Owner.Creature))
+        if (!participants.Contains(Owner.Creature) || _questCompletedThisTurn)
         {
             return;
         }
 
-        if (_currentQuest == 1 &&
-            _damageReceivedThisTurn == 0)
+        if (_currentQuest == Quest.TakeNoDamage && _damageReceivedThisTurn == 0)
         {
             await CompleteQuest(choiceContext);
-            return;
         }
-
-        if (_currentQuest == 4 &&
-            Owner.PlayerCombatState.Energy == 1)
+        else if (_currentQuest == Quest.EndWithOneEnergy && Owner.PlayerCombatState.Energy == 1)
         {
             await CompleteQuest(choiceContext);
         }
@@ -147,7 +132,7 @@ public class TerminalRelic : LuenRelic
     public override Task AfterCombatEnd(CombatRoom room)
     {
         ResetTurnProgress();
-        _currentQuest = -1;
+        _currentQuest = null;
         return Task.CompletedTask;
     }
 
@@ -160,7 +145,7 @@ public class TerminalRelic : LuenRelic
         _questCompletedThisTurn = false;
     }
 
-    private void CheckQuest()
+    private async Task CheckQuest(PlayerChoiceContext choiceContext)
     {
         if (_questCompletedThisTurn)
         {
@@ -169,36 +154,20 @@ public class TerminalRelic : LuenRelic
 
         bool completed = _currentQuest switch
         {
-            // 한 턴 동안 피해 15 이상 주기
-            0 => _damageGivenThisTurn >= 15,
-
-            // 한 턴 동안 피해를 받지 않기
-            // 이 조건은 턴 종료 시 별도 판정이 필요하다.
-            1 => false,
-
-            // 피해 5 이상 받기
-            2 => _damageReceivedThisTurn >= 5,
-
-            // 시작 드로우를 제외하고 카드 2장 이상 뽑기
-            3 => _extraCardsDrawnThisTurn >= 2,
-
-            // 턴 종료 시 에너지 1
-            4 => false,
-
-            // 파워 카드 사용
-            5 => _powerCardPlayedThisTurn,
-
+            Quest.DealFifteenDamage => _damageGivenThisTurn >= 15,
+            Quest.TakeFiveDamage => _damageReceivedThisTurn >= 5,
+            Quest.DrawTwoCards => _extraCardsDrawnThisTurn >= 2,
+            Quest.PlayPowerCard => _powerCardPlayedThisTurn,
             _ => false
         };
 
         if (completed)
         {
-            // 비동기 보상 처리는 별도 작업으로 실행한다.
-            _ = CompleteQuest(null);
+            await CompleteQuest(choiceContext);
         }
     }
 
-    private async Task CompleteQuest(PlayerChoiceContext? choiceContext)
+    private async Task CompleteQuest(PlayerChoiceContext choiceContext)
     {
         if (_questCompletedThisTurn)
         {
@@ -208,27 +177,22 @@ public class TerminalRelic : LuenRelic
         _questCompletedThisTurn = true;
         Flash();
 
-        // 지령의 가호 1:
-        // 힘 1과 민첩 1을 각각 얻는다.
-        if (choiceContext != null)
-        {
-            await PowerCmd.Apply<StrengthPower>(
-                choiceContext,
-                Owner.Creature,
-                1m,
-                Owner.Creature,
-                null
-            );
+        await PowerCmd.Apply<StrengthPower>(
+            choiceContext,
+            Owner.Creature,
+            1m,
+            Owner.Creature,
+            null
+        );
 
-            await PowerCmd.Apply<DexterityPower>(
-                choiceContext,
-                Owner.Creature,
-                1m,
-                Owner.Creature,
-                null
-            );
-        }
+        await PowerCmd.Apply<DexterityPower>(
+            choiceContext,
+            Owner.Creature,
+            1m,
+            Owner.Creature,
+            null
+        );
 
-        MainFile.Logger.Info("단말기 지령 완료: 지령의 가호 +1");
+        MainFile.Logger.Info("Terminal command completed: gained 1 Strength and 1 Dexterity.");
     }
 }

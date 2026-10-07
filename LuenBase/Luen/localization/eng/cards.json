@@ -9,6 +9,8 @@
   "LUEN-DOUBLE_SLASH.description": "Deal 4 damage 2 times.",
   "LUEN-COMMAND_TRAJECTORY.title": "Command Trajectory",
   "LUEN-COMMAND_TRAJECTORY.description": "Deal 10 damage. Remove the target's Strength.",
+  "LUEN-MULTI_SLASH.title": "Multi Slash",
+  "LUEN-MULTI_SLASH.description": "Deal 7 damage. Draw 1 card. If your draw pile is Unique, gain 1 Energy.",
   "LUEN-CADUCEUS_OPENING.title": "Caduceus - Opening",
   "LUEN-CADUCEUS_OPENING.description": "Activate one of the following effects. The effect is determined when drawn.\n1: Deal 5 damage and gain 5 Thorns.\n2: Deal 5 damage, then deal 2 damage twice.\n3: Deal 4 damage to ALL enemies twice."
 }
