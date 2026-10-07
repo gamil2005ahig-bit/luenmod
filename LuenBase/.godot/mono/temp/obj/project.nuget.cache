@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/+12J10lKc4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\home\\Documents\\GitHub\\luenmod\\LuenBase\\Luen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\home\\.nuget\\packages\\alchyr.sts2.baselib\\3.4.7\\alchyr.sts2.baselib.3.4.7.nupkg.sha512",
+    "C:\\Users\\home\\.nuget\\packages\\godot.sourcegenerators\\4.5.1\\godot.sourcegenerators.4.5.1.nupkg.sha512",
+    "C:\\Users\\home\\.nuget\\packages\\godotsharp\\4.5.1\\godotsharp.4.5.1.nupkg.sha512",
+    "C:\\Users\\home\\.nuget\\packages\\godotsharpeditor\\4.5.1\\godotsharpeditor.4.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
