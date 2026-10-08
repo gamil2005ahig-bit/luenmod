@@ -24,6 +24,7 @@ public class MultiSlash()
         if (Owner.HasUniqueDrawPile())
         {
             await PlayerCmd.GainEnergy(1, Owner);
+            await Owner.TriggerUnique(context);
         }
     }
 }

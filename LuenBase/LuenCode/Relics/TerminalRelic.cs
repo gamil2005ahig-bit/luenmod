@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using BaseLib.Cards.Variables;
@@ -204,6 +205,13 @@ public class TerminalRelic : LuenRelic
             Owner.Creature,
             null
         );
+
+        foreach (var listener in Owner.Creature.Powers
+                     .OfType<ICommandCompletionListener>()
+                     .ToList())
+        {
+            await listener.OnCommandCompleted(choiceContext);
+        }
 
         MainFile.Logger.Info("Terminal command completed: gained 1 stack of Command's Protection.");
     }

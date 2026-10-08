@@ -25,6 +25,8 @@ public class UniqueSwordDance()
                 .FromCard(this, cardPlay)
                 .TargetingAllOpponents(CombatState!)
                 .Execute(context);
+
+            await Owner.TriggerUnique(context);
         }
     }
 }

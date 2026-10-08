@@ -22,6 +22,7 @@ public class MeaningOfCommand()
         if (Owner.HasUniqueDrawPile())
         {
             await PlayerCmd.GainEnergy(2, Owner);
+            await Owner.TriggerUnique(context);
         }
     }
 }
