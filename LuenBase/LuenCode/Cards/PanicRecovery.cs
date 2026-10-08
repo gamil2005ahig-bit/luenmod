@@ -34,7 +34,7 @@ public class PanicRecovery()
             this
         );
 
-        await PowerCmd.Apply<WoundPower>(
+        await PowerCmd.Apply<FrailPower>(
             context,
             Owner.Creature,
             -4m,
