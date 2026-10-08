@@ -53,7 +53,7 @@ public class TerminalRelic : LuenRelic
         Quest.TakeNoDamage => $"Take no damage — {_damageReceivedThisTurn:0} taken",
         Quest.TakeFiveDamage => $"Take 5 damage — {_damageReceivedThisTurn:0}/5",
         Quest.DrawTwoCards => $"Draw 2 cards — {_extraCardsDrawnThisTurn}/2",
-        Quest.EndWithOneEnergy => $"End with 1 Energy — current: {Owner.PlayerCombatState.Energy:0}",
+        Quest.EndWithOneEnergy => $"End with 1 Energy — current: {(Owner.PlayerCombatState?.Energy ?? 0m):0}",
         Quest.PlayPowerCard => "Play a Power card — incomplete",
         _ => "Unknown command."
     };
@@ -143,7 +143,7 @@ public class TerminalRelic : LuenRelic
         {
             await CompleteQuest(choiceContext);
         }
-        else if (_currentQuest == Quest.EndWithOneEnergy && Owner.PlayerCombatState.Energy == 1)
+        else if (_currentQuest == Quest.EndWithOneEnergy && Owner.PlayerCombatState?.Energy == 1)
         {
             await CompleteQuest(choiceContext);
         }

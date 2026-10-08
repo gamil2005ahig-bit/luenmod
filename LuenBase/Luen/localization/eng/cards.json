@@ -56,7 +56,7 @@
   "LUEN-REPEATING_COMMAND.title": "Repeating Command",
   "LUEN-REPEATING_COMMAND.description": "Gain X Command's Protection. Exhaust.",
   "LUEN-PANIC_RECOVERY.title": "Panic Recovery",
-  "LUEN-PANIC_RECOVERY.description": "Reduce your Vulnerable, Weak, and Wound by 4. Exhaust.",
+  "LUEN-PANIC_RECOVERY.description": "Reduce your Vulnerable, Weak, and Frail by 4. Exhaust.",
   "LUEN-READY_STANCE.title": "Ready Stance",
   "LUEN-READY_STANCE.description": "Choose up to 3 cards in your draw pile to Exhaust. Draw 1 card."
 }
