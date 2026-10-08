@@ -7,11 +7,11 @@ namespace Luen.LuenCode.Cards;
 public class DoubleSlash()
     : LuenCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     public override void AfterCreated()
     {
         base.AfterCreated();
 
-        AddKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(

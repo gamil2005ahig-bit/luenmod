@@ -7,6 +7,8 @@ namespace Luen.LuenCode.Cards;
 
 public class CommandTrajectory : LuenCard
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+
     public CommandTrajectory()
         : base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
@@ -16,8 +18,6 @@ public class CommandTrajectory : LuenCard
     {
         base.AfterCreated();
 
-        // 카드 사용 후 소멸시킨다.
-        AddKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(

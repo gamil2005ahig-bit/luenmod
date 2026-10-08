@@ -69,6 +69,12 @@ public class TerminalRelic : LuenRelic
         }
 
         ResetTurnProgress();
+        if (Owner.Creature.Powers.OfType<TerminalSuppressionPower>().Any())
+        {
+            _currentQuest = null;
+            return Task.CompletedTask;
+        }
+
         _currentQuest = (Quest)Owner.RunState!.Rng.CombatCardSelection.NextInt(QuestCount);
 
         MainFile.Logger.Info($"Terminal new command: {_currentQuest}");
@@ -186,6 +192,12 @@ public class TerminalRelic : LuenRelic
         {
             await CompleteQuest(choiceContext);
         }
+    }
+
+    public async Task CompleteExtraCommand(PlayerChoiceContext choiceContext)
+    {
+        await CompleteQuest(choiceContext);
+        _questCompletedThisTurn = false;
     }
 
     private async Task CompleteQuest(PlayerChoiceContext choiceContext)

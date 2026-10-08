@@ -32,10 +32,7 @@ public class Luen : PlaceholderCharacterModel
         ModelDb.Card<DefendIronclad>(),
         ModelDb.Card<DefendIronclad>(),
 
-        ModelDb.Card<CaduceusStart>(),
-
-        // 테스트용으로 지령의 궤적을 시작 덱에 추가
-        ModelDb.Card<CommandTrajectory>()
+        ModelDb.Card<CaduceusStart>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

@@ -8,10 +8,10 @@ namespace Luen.LuenCode.Cards;
 public class FuriosoCrescendo()
     : LuenCard(1, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     public override void AfterCreated()
     {
         base.AfterCreated();
-        AddKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(

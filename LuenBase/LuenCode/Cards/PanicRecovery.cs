@@ -8,10 +8,10 @@ namespace Luen.LuenCode.Cards;
 public class PanicRecovery()
     : LuenCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     public override void AfterCreated()
     {
         base.AfterCreated();
-        AddKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(

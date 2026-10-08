@@ -2,15 +2,21 @@
     <Import Project=".\Sts2PathDiscovery.props"/>
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
+        <GodotProjectDir Condition="'$(GodotProjectDir)' == ''">$(MSBuildProjectDirectory)\</GodotProjectDir>
         <ImplicitUsings>true</ImplicitUsings>
         <Nullable>enable</Nullable> <!--Makes code analysis regarding null values stricter.-->
-        <Publicize>False</Publicize> <!--Allows access to originally private/protected members but may (unlikely to) cause errors.-->
+        <Publicize>False</Publicize> <!--Allows access to originally private/protected members but may (unlikely) to cause errors.-->
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
         <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
         <PathMap>$(AppOutputBase)=.\</PathMap>
         <GodotDisabledSourceGenerators>GodotPluginsInitializer</GodotDisabledSourceGenerators>
     </PropertyGroup>
+
+    <ItemGroup>
+        <CompilerVisibleProperty Include="GodotProjectDir" />
+        <CompilerVisibleProperty Include="GodotProjectDirBase64" />
+    </ItemGroup>
 
     <PropertyGroup>
         <!-- Diasble architecture mismatch warning; mods are ideally built for all platforms (MSIL)

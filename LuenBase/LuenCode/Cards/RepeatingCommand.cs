@@ -8,12 +8,12 @@ namespace Luen.LuenCode.Cards;
 public class RepeatingCommand()
     : LuenCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override bool HasEnergyCostX => true;
 
     public override void AfterCreated()
     {
         base.AfterCreated();
-        AddKeyword(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(
