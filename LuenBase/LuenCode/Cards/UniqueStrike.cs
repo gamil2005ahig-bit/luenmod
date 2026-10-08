@@ -22,6 +22,7 @@ public class UniqueStrike()
         if (isUnique)
         {
             await CardPileCmd.Draw(context, 2m, Owner);
+            await Owner.TriggerUnique(context);
         }
     }
 }

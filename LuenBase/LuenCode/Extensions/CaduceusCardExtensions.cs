@@ -17,6 +17,11 @@ public static class CaduceusCardExtensions
         );
     }
 
+    public static int CountCaduceusCardsInDeck(this Player player)
+    {
+        return player.Deck.Cards.Count(card => card.IsCaduceusCard());
+    }
+
     public static int CountCaduceusCardsPlayedThisCombat(this Player player)
     {
         return CombatManager.Instance.History.CardPlaysFinished.Count(entry =>

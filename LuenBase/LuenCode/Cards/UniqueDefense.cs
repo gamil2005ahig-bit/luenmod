@@ -33,6 +33,8 @@ public class UniqueDefense()
                 Owner.Creature,
                 this
             );
+
+            await Owner.TriggerUnique(context);
         }
     }
 }
