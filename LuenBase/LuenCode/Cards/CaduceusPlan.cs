@@ -1,12 +1,12 @@
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class CaduceusPlan()
-    : LuenCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+    : RienCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

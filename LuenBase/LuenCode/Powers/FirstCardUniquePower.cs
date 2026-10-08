@@ -1,13 +1,13 @@
-using Luen.LuenCode.Extensions;
+using Rien.RienCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class FirstCardUniquePower : LuenPower
+public class FirstCardUniquePower : RienPower
 {
     private bool _used;
     public override PowerType Type => PowerType.Buff;

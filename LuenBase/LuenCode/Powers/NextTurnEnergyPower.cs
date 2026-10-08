@@ -4,9 +4,9 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class NextTurnEnergyPower : LuenPower
+public class NextTurnEnergyPower : RienPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

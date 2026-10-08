@@ -7,10 +7,10 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Hooks;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class Redeploy()
-    : LuenCard(0, CardType.Skill, CardRarity.Common, TargetType.Self)
+    : RienCard(0, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

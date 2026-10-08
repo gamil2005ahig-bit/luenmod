@@ -1,15 +1,15 @@
 using System.Linq;
 
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class Perform()
-    : LuenCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    : RienCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

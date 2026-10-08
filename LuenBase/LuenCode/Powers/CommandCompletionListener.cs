@@ -1,6 +1,6 @@
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
 public interface ICommandCompletionListener
 {

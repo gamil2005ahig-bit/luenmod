@@ -6,9 +6,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class CommandProtectionPower : LuenPower
+public class CommandProtectionPower : RienPower
 {
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;

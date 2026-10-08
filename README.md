@@ -1,2 +1,2 @@
 # luenmod
-Slay the Spire 2 Mod character for luen
+Slay the Spire 2 Mod character for Rien

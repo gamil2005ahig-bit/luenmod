@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Luen.LuenCode.Extensions;
+namespace Rien.RienCode.Extensions;
 
 //Mostly utilities to get asset paths.
 public static class StringExtensions

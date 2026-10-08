@@ -5,13 +5,13 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class ReadyStance()
-    : LuenCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+    : RienCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     private static readonly LocString SelectionPrompt =
-        new("card_selection", "LUEN-READY_STANCE_SELECT");
+        new("card_selection", "RIEN-READY_STANCE_SELECT");
 
     protected override async Task OnPlay(
         PlayerChoiceContext context,

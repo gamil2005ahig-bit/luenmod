@@ -8,10 +8,10 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class CaduceusStrategy()
-    : LuenCard(0, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+    : RienCard(0, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [
         CardKeyword.Exhaust,

@@ -1,12 +1,12 @@
-using Luen.LuenCode.Extensions;
+using Rien.RienCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class Debt()
-    : LuenCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+    : RienCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

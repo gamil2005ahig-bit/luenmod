@@ -1,14 +1,14 @@
-using Luen.LuenCode.Extensions;
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Extensions;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class UniqueDefense()
-    : LuenCard(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
+    : RienCard(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

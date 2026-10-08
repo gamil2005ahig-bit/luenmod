@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using BaseLib.Cards.Variables;
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -16,9 +16,9 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Relics;
+namespace Rien.RienCode.Relics;
 
-public class TerminalRelic : LuenRelic
+public class TerminalRelic : RienRelic
 {
     private enum Quest
     {

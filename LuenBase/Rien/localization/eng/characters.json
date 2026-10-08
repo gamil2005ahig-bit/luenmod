@@ -1,0 +1,20 @@
+{
+  "RIEN-RIEN.title": "Rien",
+  "RIEN-RIEN.titleObject": "Rien",
+  "RIEN-RIEN.description": "A warrior who follows orders and changes the Caduceus.",
+  "RIEN-RIEN.pronounObject": "them",
+  "RIEN-RIEN.possessiveAdjective": "their",
+  "RIEN-RIEN.pronounPossessive": "theirs",
+  "RIEN-RIEN.pronounSubject": "they",
+  "RIEN-RIEN.goldMonologue": "",
+  "RIEN-RIEN.eventDeathPrevention": "",
+  "RIEN-RIEN.aromaPrinciple": "",
+  "RIEN-RIEN.cardsModifierTitle": "",
+  "RIEN-RIEN.cardsModifierDescription": "",
+  "RIEN-RIEN.banter.alive.endTurnPing": "",
+  "RIEN-RIEN.banter.dead.endTurnPing": "",
+  "THE_ARCHITECT.talk.SYMBOLID.0-0r.char": "",
+  "THE_ARCHITECT.talk.SYMBOLID.0-0r.next": "",
+  "THE_ARCHITECT.talk.SYMBOLID.0-1r.ancient": "",
+  "THE_ARCHITECT.talk.SYMBOLID.0-attack": ""
+}

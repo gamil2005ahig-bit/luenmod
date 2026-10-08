@@ -3,10 +3,10 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class FuriosoCrescendo()
-    : LuenCard(1, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
+    : RienCard(1, CardType.Attack, CardRarity.Token, TargetType.AllEnemies)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     public override void AfterCreated()

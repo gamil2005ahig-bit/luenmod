@@ -7,9 +7,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Entities.Players;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class FaithCostReductionPower : LuenPower
+public class FaithCostReductionPower : RienPower
 {
     private readonly HashSet<CardModel> _cards = [];
 

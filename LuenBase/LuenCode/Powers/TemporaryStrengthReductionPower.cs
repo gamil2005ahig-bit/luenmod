@@ -7,9 +7,9 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class TemporaryStrengthReductionPower : LuenPower
+public class TemporaryStrengthReductionPower : RienPower
 {
     public override PowerType Type => PowerType.Debuff;
     public override PowerStackType StackType => PowerStackType.Counter;

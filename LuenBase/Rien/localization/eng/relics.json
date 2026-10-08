@@ -1,0 +1,4 @@
+{
+  "RIEN-TERMINAL_RELIC.title": "Terminal",
+  "RIEN-TERMINAL_RELIC.description": "At the start of each turn, receive a random command.\nCurrent command: {TerminalCommand}\nComplete it to gain 1 stack of Command's Protection."
+}

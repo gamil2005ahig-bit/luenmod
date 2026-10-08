@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Luen"
+config/name="Rien"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
-config/icon="res://Luen/mod_image.png"
+config/icon="res://Rien/mod_image.png"
 
 [display]
 
@@ -24,7 +24,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Luen"
+project/assembly_name="Rien"
 
 [rendering]
 

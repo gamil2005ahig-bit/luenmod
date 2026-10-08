@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
-public class CaduceusEnd() : LuenCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class CaduceusEnd() : RienCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     private const string EffectVarName = "CaduceusEffect";
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar(EffectVarName, 1m)];

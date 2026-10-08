@@ -1,17 +1,17 @@
 using System.Linq;
 
-using Luen.LuenCode.Extensions;
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Extensions;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class FuriosoReplica()
-    : LuenCard(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+    : RienCard(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
     protected override async Task OnPlay(
         PlayerChoiceContext context,

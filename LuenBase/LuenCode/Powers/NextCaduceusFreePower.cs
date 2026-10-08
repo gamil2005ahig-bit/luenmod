@@ -5,11 +5,11 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 
-using Luen.LuenCode.Extensions;
+using Rien.RienCode.Extensions;
 
-namespace Luen.LuenCode.Powers;
+namespace Rien.RienCode.Powers;
 
-public class NextCaduceusFreePower : LuenPower
+public class NextCaduceusFreePower : RienPower
 {
     private CardModel? _sourceCard;
 

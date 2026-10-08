@@ -1,13 +1,13 @@
-using Luen.LuenCode.Extensions;
+using Rien.RienCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class Finisher()
-    : LuenCard(4, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+    : RienCard(4, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     public override bool TryModifyEnergyCostInCombat(
         CardModel card,

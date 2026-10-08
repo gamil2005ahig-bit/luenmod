@@ -1,13 +1,13 @@
 using System.Linq;
 
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 
-namespace Luen.LuenCode.Extensions;
+namespace Rien.RienCode.Extensions;
 
 public static class CommandProtectionExtensions
 {

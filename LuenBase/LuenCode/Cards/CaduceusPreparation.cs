@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Luen.LuenCode.Cards;
+namespace Rien.RienCode.Cards;
 
 public class CaduceusPreparation()
-    : LuenCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+    : RienCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     private const string EffectVarName = "CaduceusEffect";
 

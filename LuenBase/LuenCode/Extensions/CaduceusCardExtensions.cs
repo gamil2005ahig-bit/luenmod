@@ -5,14 +5,14 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
 
-namespace Luen.LuenCode.Extensions;
+namespace Rien.RienCode.Extensions;
 
 public static class CaduceusCardExtensions
 {
     public static bool IsCaduceusCard(this CardModel card)
     {
         return card.Id.Entry.StartsWith(
-            "LUEN-CADUCEUS_",
+            "RIEN-CADUCEUS_",
             StringComparison.Ordinal
         );
     }

@@ -1,11 +1,11 @@
 using System.Linq;
 
-using Luen.LuenCode.Powers;
+using Rien.RienCode.Powers;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
-namespace Luen.LuenCode.Extensions;
+namespace Rien.RienCode.Extensions;
 
 public static class UniqueTriggerExtensions
 {
