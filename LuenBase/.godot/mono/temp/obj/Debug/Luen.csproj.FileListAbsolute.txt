@@ -11,12 +11,3 @@ C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.
 C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\obj\Debug\refint\Luen.dll
 C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.pdb
 C:\Users\home\Documents\GitHub\luenmod\LuenBase\.godot\mono\temp\obj\Debug\ref\Luen.dll
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.csproj.AssemblyReference.cache
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.AssemblyInfoInputs.cache
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.AssemblyInfo.cs
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.csproj.CoreCompileInputs.cache
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.sourcelink.json
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.dll
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\refint\Luen.dll
-C:\Users\home\Desktop\luenmod\LuenBase\.godot\mono\temp\obj\Debug\Luen.pdb
